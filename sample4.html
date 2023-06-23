@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Registration form</title>
+    </head>
+    <body>
+        <h2>Registration Form</h2>
+        <form name="myform" action="sample1.html"2 onsubmit="return validate()" method="post">
+        First Name:<input type="text" name="fname"></br></br>
+        Last Name:<input type="text" name="lname"></br></br>
+        E-mail:<input type="email" id="email"></br></br>
+        Password:<input type="password" id="pass"></br></br>
+        Confirm Password:<input type="password" id="cpass"></br></br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        </form>
+    </body>
+    <script>
+        function validate(){
+         
+            var x= document.forms["myform"]["fname"].value;
+            if(x==''){
+                alert("enter your firstname");
+                return false;
+            }
+            var y= document.forms["myform"]["lname"].value;
+            if(y==''){
+                alert("enter your lastname");
+                return false;
+            }
+            var a=document.forms["myform"]["email"].value;
+            if(a==''){
+                alert("enter your email ");
+                return false;
+            }
+            var b=document.forms["myform"]["pass"].value;
+            if(b==''){
+                alert("please enter your password ");
+                return false;
+            }
+            var c=document.forms["myform"]["cpass"].value;
+            if(c==''){
+                alert("please enter your password ");
+                return false;
+            }
+            var b=document.forms["myform"]["pass"].value;
+            var c=document.forms["myform"]["cpass"].value;
+            if(c!=b){
+                alert("Password not matched");
+                return false;
+            }
+        }
+    </script>
+</html>
